@@ -1,22 +1,28 @@
- import {printOutput} from "./output.js";
-import {printTimer} from "./output_timer.js";
+ import {
+     printOutput
+ } from "./output.js";
+ import {
+     printTimer
+ } from "./output_timer.js";
 
 
-const timerDate= document.getElementById("timerDate");
+ const timerDate = document.getElementById("timerDate");
 
-timerDate.onsubmit = (event)=>{
-    event.preventDefault();
-    
-    const {timeDate} =timerDate.elements;
-    
+ timerDate.onsubmit = (event) => {
+     event.preventDefault();
 
-    if (!timeDate.value || isNaN(timeDate.value)){
-        printOutput ("Заполните все поля")
+     const {
+         timeDate
+     } = timerDate.elements;
 
-        return ;
-    }
 
-    printTimer(timeDate.value)
-    
-    
-}
+     if (!timeDate.value || isNaN(timeDate.value)) {
+         printOutput("Заполните все поля")
+
+         return;
+     }
+
+     printTimer(timeDate.value)
+
+
+ }
